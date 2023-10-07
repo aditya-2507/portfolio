@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e188c6a22e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="">
+                <ul id="sidemenu">
+                    <li><a href=#>Home</a></li>
+                    <li><a href=#>About</a></li>
+                    <li><a href=#>Services</a></li>
+                    <li><a href=#>Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web devloper</p>
+                <h1>Hi,I'm <span>Aditya Raj<br></span> </h1>
+            </div>
+        </div>
+        <!----------------about----------->
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/man-0c927cbbb557d9239018a5fad977746e.png" alt="aa">
+                </div>
+                <div class="about-col-2">
+                    
+                    <h1 class="sub-title">About Me</h1>
+                    
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, nisi assumenda nemo, et, quam ad error alias aut in ducimus esse. Alias, dolorum enim ipsam eligendi adipisci nesciunt sunt numquam.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing web/App interfaces</li>
+                            <li><span>Web Devlopment</span><br>Web app  Development</li>
+                            <li><span>Front End</span><br>HTML,CSS,JS,REACT</li>
+                            <li><span>Back End</span><br>node js,django</li></ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023(sept-oct)</span><br> Internship at Bharath Intern</li>
+                            <li><span>2023(aug-sept)</span><br> Internship at Webstack academy,banglore</li>
+                            <li><span>2022(sept-oct)</span><br>Internship at Exposys Data lab,banglore</li>
+                        </ul></div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                        <li><span>2021-2025</span><br>B.E from CMRIT,Banglore</li>
+                        <li><span>2013-2020</span><br>Patna central school,Patna</li>
+                        <li><span>2006-2013</span><br>St'mary school,Patna</li></ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------services-------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Devlopment</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at provident atque cupiditate id asperiores ratione impedit consequatur odit. Voluptas consequuntur autem distinctio cum quod odio corrupti consequatur ipsa voluptatum.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at provident atque cupiditate id asperiores ratione impedit consequatur odit. Voluptas consequuntur autem distinctio cum quod odio corrupti consequatur ipsa voluptatum.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis at provident atque cupiditate id asperiores ratione impedit consequatur odit. Voluptas consequuntur autem distinctio cum quod odio corrupti consequatur ipsa voluptatum.</p>
+                    <a href="#">learn more</a>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <a href="#" class="btn">See more</a>  
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>raj699203@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>6361186258</p>
+                    <div class="social">
+                        <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Nmae" placeholder="Enter your Name" required>
+                        <input type="email" name="email" placeholder="Enter your Email ID" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button  class="btn btn2" type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="copyright">
+                    <p>copyright © by Aditya </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right ="0";
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px";
+        }
+    </script>
+</body>
+</html>
